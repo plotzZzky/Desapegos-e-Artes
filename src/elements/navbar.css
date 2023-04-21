@@ -1,0 +1,136 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background-color: var(--color_accent);
+  z-index: 999;
+  box-shadow: var(--shadow);
+}
+
+.navbar-align {
+  width: calc(100% - 4em);
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand {
+  width: calc(var(--menu_size) + 210px);
+  height: 50px;
+  padding: 0;
+  color: var(--fontColor_sec);
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.brand-name {
+  margin: auto;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.menu {
+  width: auto;
+  height: auto;
+  margin: 0px;
+  margin-right: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  font-size: 1.0em;
+  color: var(--fontColor_sec);
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.menu-item {
+  width: var(--menu_size);
+  padding: 12px 0px;
+  margin-right: 4px;
+  margin-left: 4px;
+  color: var(--fontColor_sec);
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-item:hover, .menu-item:hover a{
+  color: var(--fontColor_pri);
+  background-color: var(--background);
+  font-weight: 500;
+}
+
+.menu-item:hover .icon-menu {
+  color: var(--fontColor_pri);
+}
+
+.menu-icon {
+  display: none;
+  width: 40px;
+  height: 28px;
+  margin: 0px;
+}
+
+.menu-icon:hover {
+  filter: invert(100);
+  background-color: var(--fontColor_pri);
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar-align {
+    width: calc(100% - 4em);
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .navbar-align {
+    width: calc(100% - 2em);
+    padding-left: 1em;
+    padding-right: 1em;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .menu {flex-direction: column;}
+  .menu-item  {display: none;}
+  .menu-icon {
+      display: block;
+  }
+
+  .menu.responsive {
+      flex-direction: column;
+      overflow: hidden;
+      align-items: flex-start;
+  }
+  .menu.responsive .menu-item {
+      display: block;
+      text-align: left;
+      padding-left: 8px;
+  }
+  .menu.responsive .menu-item a {text-align: left;}
+}
+
+
+@media screen and (max-width: 750px) {
+  .brand {
+    width: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .brand-name {
+    font-size: 0;
+  }
+
+}
