@@ -10,9 +10,9 @@ library.add(faGithub)
 
 export default function App() {
     const [getAnswer, setAnswer] = useState([['As peças são lavadas antes da venda?', 'Sim, todas as peças são lavadas e higienizadas antes de serem colocadas à venda.'],
-    ['Vocês oferecem trocas ou devoluções?', ' Infelizmente, não oferecemos trocas ou devoluções. Por isso, é importante verificar cuidadosamente as medidas e detalhes da peça antes de fazer a compra.'],
     ['Como posso pagar pelas minhas compras?', 'Aceitamos pagamentos via cartão de crédito, débito e transferência bancária.'],
     ['Vocês fazem entrega para todo o país?', ' Sim, fazemos entregas para todo o país. O frete é calculado de acordo com a região de entrega.'], 
+    ['Vocês oferecem trocas ou devoluções?', ' Infelizmente, não oferecemos trocas ou devoluções. Por isso, é importante verificar cuidadosamente as medidas e detalhes da peça antes de fazer a compra.'],
     ['Como posso garantir que a peça vai me servir?', 'É importante verificar cuidadosamente as medidas da peça antes de fazer a compra. Caso tenha dúvidas, entre em contato conosco e teremos prazer em ajudá-lo.']
     ]);
 
@@ -47,10 +47,10 @@ export default function App() {
 
             <div className='page' id='about'>
                 <a className='title'>  Quem somos... </a>
-                <p className='home-text'> Nosso brechó é criado com amor e dedicação, oferecendo uma opção de moda sustentável e única. Selecionamos cuidadosamente peças de qualidade e estilo, cada uma escolhida individualmente e higienizada. Oferecemos roupas femininas e masculinas, além de acessórios, e fazemos entregas em todo o país. Aproveite a moda de uma maneira mais sustentável e sinta a diferença de um brechó cuidadosamente criado para você. </p>
+                <p className='home-text'> Nosso brechó foi criado com amor e dedicação, oferecendo uma opção de moda sustentável e única. Selecionamos cuidadosamente peças de qualidade e estilo, cada uma escolhida individualmente e higienizada. Oferecemos roupas femininas e masculinas, além de acessórios, e fazemos entregas em todo o país. Aproveite a moda de uma maneira mais sustentável e sinta a diferença de um brechó cuidadosamente criado para você. </p>
             </div>
 
-            <div className='page' id='faq' style={{paddingTop: '2em'}}>
+            <div className='page' id='faq'>
                 <h3 className='title'>  Dúvidas... </h3>
                 <div className='align-faq'> 
                     {getAnswer.map((data) => (

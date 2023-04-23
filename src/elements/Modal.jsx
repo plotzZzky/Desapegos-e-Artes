@@ -70,8 +70,10 @@ export default function Modal(props) {
                     <button className="modal-btn-plus" onClick={show_next_image}> <FontAwesomeIcon icon="fa-solid fa-chevron-right" /> </button>
                 </div>
                 <div className="modal-infos">
-                    <h2 className='card-name'> {props.data.name} </h2>
-                    <p className='modal-price'> R$ {props.data.price} </p> 
+                    <div className="align-price">
+                        <a className='modal-name'> {props.data.name} </a>
+                        <a className='modal-price'> R$ {props.data.price} </a> 
+                    </div>
                     <p className="card-desc"> {props.data.desc}</p>
                     <button className="order-btn" onClick={go_to_profile}> Visualizar na loja! </button>
                 </div>

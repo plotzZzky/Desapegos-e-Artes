@@ -72,14 +72,14 @@
 }
 
 .div-cards {
-    width: calc(100% - em);
+    width: calc(100%);
     height: auto;
-    min-height: calc(100vh - 5em);
     margin: auto;
+    padding-top: 1em;
     display: flex;
     justify-content: center;
-    gap: 1em 1em;
     flex-wrap: wrap;
+    gap: 10px 10px;
     z-index: 900;
 }
 
@@ -89,7 +89,6 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 1em 0;
     box-shadow: var(--shadow);
     position: relative;
     cursor: pointer;
@@ -97,11 +96,11 @@
 
 .card-img {
     width: 100%;
-    height: 92%;
+    height: 100%;
     object-fit: cover;
 }
 
-.card-price {
+.card-price, .card-name {
     font-size: 1em;
     font-weight: 600;
     color: var(--fontColor_sec);
@@ -114,10 +113,10 @@
     left: 0;
     width: 100%;
     height: 40px;
+    border: none;
     color: var(--fontColor_sec);
     font-size: 1em;
     background-color: var(--color_accent);
-    border: none;
     cursor: pointer;
     display: flex;
     justify-content: space-around;
@@ -167,6 +166,18 @@
     background-color: white;
     position: relative;
     padding: 2em;
+}
+
+.align-price {
+    display: flex;
+    flex-direction: column;
+    gap: 1em 0;
+}
+
+.modal-name {
+    color: var(--fontColor_pri);
+    font-size: 1.3em;
+    font-weight: 800;
 }
 
 .modal-price {
@@ -234,8 +245,8 @@
     .div-cards{
         width: calc(100% - 28px);
         margin-left: 20px;
-        justify-content: space-around;
-        gap: 1em 8px;
+        justify-content: center;
+        gap: 8px 8px;
     }
 
     .card {
@@ -255,6 +266,56 @@
         flex-direction: column;
     }
 
+    .modal-card {
+        width: 80%;
+        height: 80%;
+        margin-top: 10%;
+    }
+
+    .modal-list-images{
+        width: 70%;
+        height: auto;
+    }
+
+    .modal-infos {
+        width: 30%;
+        padding: 1em;
+        height: auto;
+    }
+
+    .card-desc {
+        overflow-y: auto;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .modal-card {
+        width: 600px;
+        height: 900px;
+        margin-top: 5%;
+        flex-direction: column;
+    }
+
+    .modal-list-images{
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-infos {
+        width: calc(100% - 2em);
+        height: calc(100% - 2em);
+        padding: 1em;
+    }
+
+    .align-price {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .modal-name {
+        font-size: 1.1em;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -278,6 +339,26 @@
 
     .card-desc {
         height: auto;
-        min-height: 120px;
+        padding-bottom: 2em;
     }
+
+    .modal-card {
+        width: 90%;
+        height: auto;
+        margin-top: 5%;
+        flex-direction: column;
+    }
+
+    .modal-list-images{
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-infos {
+        width: calc(100% - 1em);
+        height: calc(100% - 1em);
+        padding: 0.5em;
+        height: auto;
+    }
+
 }
