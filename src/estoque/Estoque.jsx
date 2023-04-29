@@ -2,9 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAngleRight, faSun, faSnowflake, faUmbrellaBeach, faRing, faSocks, faBagShopping, faBars} from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight, faSun, faSnowflake, faRing, faSocks, faBagShopping, faBars} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faAngleRight, faSun, faSnowflake, faUmbrellaBeach, faRing, faSocks, faBagShopping, faBars )
+library.add(faAngleRight, faSun, faSnowflake, faRing, faSocks, faBagShopping, faBars )
 
 import NavBar from "../elements/navbar"
 import Card from '../elements/Card'
@@ -19,8 +19,8 @@ export default function Estoque() {
     const [getInfo, setInfo] = useState([])
 
     const Categories = [['Verão', <FontAwesomeIcon icon="fa-solid fa-sun" />], ['Inverno', <FontAwesomeIcon icon="fa-solid fa-snowflake" />], 
-    ['Casual', <FontAwesomeIcon icon="fa-solid fa-umbrella-beach" />], ['Acessórios', <FontAwesomeIcon icon="fa-solid fa-ring" />], 
-    ['Calçados',<FontAwesomeIcon icon="fa-solid fa-socks" /> ], ['Outros', <FontAwesomeIcon icon="fa-solid fa-bag-shopping" />]]
+    ['Acessórios', <FontAwesomeIcon icon="fa-solid fa-ring" />], ['Calçados',<FontAwesomeIcon icon="fa-solid fa-socks" /> ], 
+    ['Outros', <FontAwesomeIcon icon="fa-solid fa-bag-shopping" />]]
 
 
     function filter_food() {
