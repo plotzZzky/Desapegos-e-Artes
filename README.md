@@ -2,4 +2,4 @@
 
 ## Site feito para um brechó de roupas da shopee com React e ViteJs
 
-<a href="">  Acesse aqui
+<a href="https://plotzzzky.github.io/Desapegos-e-Artes/estoque/">  Acesse aqui
